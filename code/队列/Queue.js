@@ -1,5 +1,6 @@
 function Queue() {
   this.elements = []
+  this.length
 }
 
 // 进入队列 enqueue

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>击鼓传花</title>
+</head>
+<body>
+  <script src="./Queue.js"></script>
+  <script>
+    function chuanhua(personList, number) {
+      // 先把人放进一个队列
+      let queue = new Queue()
+      for(let i = 0, len = personList.length; i < len; i++) {
+        queue.enqueue(personList[i])
+      }
+      console.log(queue.toString());
+      // 传花，当队列中只剩下一个人的时候停止传花
+      let i = 1
+      while (queue.size() > 1) {
+        if(i === number) {
+          i = 1
+          queue.dequeue()
+          continue
+        }
+        i++
+        queue.enqueue(queue.dequeue())
+      }
+      // 输出结果
+      return queue.toString()
+    }
+
+    let start = new Date().getTime()
+    let personList = ['lily', 'lucy', 'Tom', 'lilei', 'why']
+    console.log(chuanhua(personList, 3))
+    let end = new Date().getTime()
+
+    console.log(end - start);
+  </script>
+</body>
+</html>
