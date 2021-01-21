@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十进制转二进制</title>
+</head>
+
+<body>
+  <script src="./Stack.js"></script>
+  <script>
+    let stack = new Stack()
+    let remainder
+    
+    function remainder2Stack(number) {
+      remainder = number % 2
+      stack.push(remainder)
+      number = Math.floor(number / 2)
+      if (number === 0) return
+      remainder2Stack(number)
+    }
+
+    function dec2Bin(number) {
+      remainder2Stack(number)
+      let bin = ''
+      while (stack.elements.length) {
+        let num = stack.pop()
+        bin += num
+      }
+      return bin
+    }
+
+    console.log(dec2Bin(100))
+    console.log(dec2Bin(1000))
+  </script>
+</body>
+
+</html>
