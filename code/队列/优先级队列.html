@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优先级队列</title>
+</head>
+<body>
+  <script src="./priorityQueue.js"></script>
+  <script>
+    let pq = new PriorityQueue()
+    pq.enqueue(1, 1)
+    pq.enqueue(2, 2)
+    pq.enqueue(3, 3)
+    pq.enqueue(4, 1)
+    pq.enqueue(5, 2)
+    pq.enqueue(6, 3)
+    alert(pq)
+    pq.dequeue()
+    pq.dequeue()
+    alert(pq)
+    alert(pq.front())
+    alert(pq.isEmpty())
+    alert(pq.size())
+  </script>
+</body>
+</html>
