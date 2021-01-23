@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实现链表</title>
+</head>
+<body>
+  <script src="./list.js"></script>
+  <script>
+    let li = new List()
+
+    li.append(1)
+    li.append(2)
+    // alert(li)
+    li.insert(1, 3)
+    // alert(li)
+    // alert(li.indexOf(3))
+    // alert(li.indexOf(2))
+    // alert(li.indexOf(5))
+    // alert(li.remove(1))
+    // alert(li.remove(5))
+    // alert(li.remove(2))
+    alert(li.removeAt(2))
+    alert(li.size())
+    alert(li)
+
+  </script>
+</body>
+</html>
