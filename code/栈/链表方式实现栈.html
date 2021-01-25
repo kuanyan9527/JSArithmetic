@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>链表方式实现栈</title>
+</head>
+<body>
+  <script src="../链表/list.js"></script>
+  <script src="./ListStack.js"></script>
+  <script>
+    let ls = new ListStack()
+    ls.push(1)
+    ls.push(2)
+    ls.push(3)
+    // alert(ls)
+    // alert(ls.size())
+    ls.pop()
+    // alert(ls)
+    // alert(ls.peek())
+    // alert(ls)
+    // alert(ls.isEmpty())
+    ls.clear()
+    alert(ls)
+    alert(ls.isEmpty())
+  </script>
+</body>
+</html>
