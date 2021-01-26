@@ -11,8 +11,7 @@ ListStack.prototype.pop = function() {
 }
 
 ListStack.prototype.peek = function() {
-  let peek = this.pop()
-  this.push(peek)
+  let peek = this.elements.get(this.size() - 1)
   return peek
 }
 

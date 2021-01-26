@@ -99,3 +99,31 @@ List.prototype.isEmpty = function() {
 List.prototype.size = function() {
   return this.length
 }
+
+// update和get
+List.prototype.update = function(position, element) {
+  if (position < 0 || position >= this.length) return false
+  let current = this.header
+  let i = 0
+  while(current) {
+    if (position === i) {
+      current.data = element
+      return true
+    }
+    current = current.next
+    i++
+  }
+}
+
+List.prototype.get = function(position) {
+  if (position < 0 || position >= this.length) return null
+  let current = this.header
+  let i = 0
+  while(current) {
+    if (position === i) {
+      return current.data
+    }
+    current = current.next
+    i++
+  }
+}
