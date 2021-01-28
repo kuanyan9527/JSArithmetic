@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>链表实现队列</title>
+</head>
+<body>
+  <script src="../链表/list.js"></script>
+  <script src="./listQueue.js"></script>
+  <script>
+    let lq = new listQueue()
+    lq.enqueue(1)
+    lq.enqueue(2)
+    lq.enqueue(3)
+    alert(lq)
+    alert(lq.dequeue())
+    alert(lq)
+    alert(lq.front())
+    alert(lq.isEmpty())
+    alert(lq.size())
+  </script>
+</body>
+</html>
