@@ -28,17 +28,22 @@ List.prototype.insert = function(position, element) {
   if (position < 0 || position > this.length) return null
   let node = new this.CreateElement(element)
 
-  let i = 0
-  let current =  this.header
-  let previous = null
-  while(i < position) {
-    previous = current
-    current = current.next
-    i++
+  if (position === 0) {
+    node.next = this.header
+    this.header = node
+  } else {
+    let i = 0
+    let current =  this.header
+    let previous = null
+    while(i < position) {
+      previous = current
+      current = current.next
+      i++
+    }
+    previous.next = node
+    node.next = current
+    this.length++
   }
-  previous.next = node
-  node.next = current
-  this.length++
   return node
 }
 
@@ -125,5 +130,15 @@ List.prototype.get = function(position) {
     }
     current = current.next
     i++
+  }
+}
+
+List.prototype.forEach = function(callBack) {
+  let current = this.header
+  let index = 0
+  while(current) {
+    callBack(current.data, index)
+    current = current.next
+    index++
   }
 }

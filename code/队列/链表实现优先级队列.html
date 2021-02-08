@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>链表实现优先级队列</title>
+</head>
+<body>
+    <script src="../链表/list.js"></script>
+    <script src="./listPriorityQueue.js"></script>
+    <script>
+      let lpq = new ListPriorityQueue()
+      lpq.enqueue('Tom', 2)
+      lpq.enqueue('Jerry', 1)
+      console.log(lpq);
+      // lpq.dequeue()
+      console.log(lpq);
+      console.log(lpq.toString());
+      console.log(lpq.front());
+      console.log(lpq.isEmpty());
+      console.log(lpq.size());
+    </script>
+</body>
+</html>
