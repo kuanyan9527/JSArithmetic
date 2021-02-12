@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>集合</title>
+</head>
+<body>
+  <script src="./set.js"></script>
+  <script>
+    let set = new Set()
+    set.add(1)
+    set.add(2)
+    set.add(3)
+    console.log(set)
+    // set.remove(1)
+    // console.log(set)
+    // console.log(set.size())
+    // console.log(set.values())
+    let set2 = new Set()
+    set2.add(3)
+    set2.add(4)
+    set2.add(5)
+    set2.add(6)
+    console.log(set2);
+    let a = set.unionSet(set2)
+    console.log(a)
+    let b = set.intersectSet(set2)
+    console.log(b)
+    let c = set2.difference(set)
+    console.log(c)
+    let set3 = new Set()
+    set3.add(1)
+    set3.add(2)
+    let f = set3.subSet(set)
+    console.log(f)
+  </script>
+</body>
+</html>
