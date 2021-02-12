@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双向链表</title>
+</head>
+<body>
+  <script src="./doubleList.js"></script>
+  <script>
+    let dl = new DoubleList()
+    dl.append(1)
+    dl.append(2)
+    dl.insert(0, 3)
+    dl.insert(1, 4)
+    dl.insert(4, 5)
+    console.log(dl)
+    console.log(dl.toString())
+    console.log(dl.get(0))
+    console.log(dl.indexOf(6))
+    console.log(dl.update(0, 0))
+    console.log(dl.toString())
+    dl.removeAt(4)
+    console.log(dl.toString())
+    dl.remove(1)
+    console.log(dl.toString())
+    console.log(dl.forwardString())
+    console.log(dl.backwordString())
+    console.log(dl.isEmpty())
+    console.log(dl.size())
+  </script>
+</body>
+</html>
