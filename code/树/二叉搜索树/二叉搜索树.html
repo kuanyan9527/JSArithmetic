@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二叉搜索树</title>
+</head>
+<body>
+  <script src="./BinarySearchTree.js"></script>
+  <script>
+    let bt = new BinarySerachTree()
+
+    bt.insert(9)
+    bt.insert(5)
+    bt.insert(3)
+    bt.insert(2)
+    bt.insert(4)
+    bt.insert(6)
+    bt.insert(7)
+    bt.insert(14)
+    bt.insert(12)
+    bt.insert(11)
+    bt.insert(18)
+    bt.insert(17)
+    bt.insert(13)
+
+    console.log(bt);
+
+    // console.log(bt)
+
+    let arr = []
+    // bt.preOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr)
+
+    // arr = []
+    // bt.middleOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr)
+
+    // arr = []
+    // bt.postOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr)
+
+    // console.log(bt.min());
+    // console.log(bt.max());
+
+    // console.log(bt.search(1));
+    // console.log(bt.search(2));
+    // console.log(bt.search(3));
+    // console.log(bt.search(9));
+    // console.log(bt.search(13));
+
+    // bt.remove(2)
+    // arr = []
+    // bt.middleOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr);
+    // // console.log(bt);
+
+    // bt.remove(6)
+    // arr = []
+    // bt.middleOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr);
+    // // console.log(bt);
+
+    bt.remove(14)
+    arr = []
+    bt.middleOrderTraverse((key) => {
+      arr.push(key)
+    })
+    console.log(arr);
+    console.log(bt);
+
+    // bt.remove(9)
+    // arr = []
+    // bt.middleOrderTraverse((key) => {
+    //   arr.push(key)
+    // })
+    // console.log(arr);
+    // console.log(bt);
+
+
+
+
+
+  </script>
+</body>
+</html>
